@@ -1,10 +1,12 @@
 package org.example.init.domain;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.List;
-
+/*
 @Entity
+@Data
 public class Usuario {
 
     @Id
@@ -27,5 +29,6 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Solicitud> historialSolicitudes;
 
-    // Getters, setters, constructor
 }
+
+ */
