@@ -30,7 +30,7 @@ public class Solicitud {
     private LocalDateTime fecha;
 
     @ManyToOne
-    private Usuario usuario;
+    private UserAccount usuario;
 
     @ManyToOne
     private Empresa empresa;

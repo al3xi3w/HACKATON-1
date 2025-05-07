@@ -1,8 +1,10 @@
 package org.example.init.domain;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 public class RestriccionEmpresa {
 
     @Id

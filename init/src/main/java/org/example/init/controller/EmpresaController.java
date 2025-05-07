@@ -33,7 +33,6 @@ public class EmpresaController {
             empresa.setFechaAfiliacion(dto.getFechaAfiliacion());
             empresa.setStatus(dto.isStatus());
             empresa.setConsumo(dto.getConsumo());
-
             Empresa savedEmpresa = empresaRepository.save(empresa);
             return ResponseEntity.ok(savedEmpresa);
         } catch (IllegalArgumentException e) {
