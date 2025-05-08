@@ -57,10 +57,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers(antMatcher("/auth")).permitAll()
+                        .requestMatchers(antMatcher("/auth/**")).permitAll()
                         .requestMatchers(antMatcher("/api/admin/companies/**")).hasAnyAuthority("ROLE_SPARKY_ADMIN")
-                        .requestMatchers(antMatcher("/api/company/restrictions")).hasAnyAuthority("ROLE_COMPANY_ADMIN")
-                        .requestMatchers(antMatcher("/api/company/users")).hasAnyAuthority("ROLE_COMPANY_ADMIN")
+                        .requestMatchers(antMatcher("/api/company/restrictions/**")).hasAnyAuthority("ROLE_COMPANY_ADMIN")
+                        .requestMatchers(antMatcher("/api/company/users/**")).hasAnyAuthority("ROLE_COMPANY_ADMIN")
                         .requestMatchers(antMatcher("/api/ai/**")).hasAnyAuthority("ROLE_USER")
                         .anyRequest().authenticated()
                 )
