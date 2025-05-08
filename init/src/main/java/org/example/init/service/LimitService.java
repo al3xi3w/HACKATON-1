@@ -1,7 +1,7 @@
 package org.example.init.service;
 
 import org.example.init.repository.RequestLogRepository;
-import org.example.init.repository.UsuarioRepository;
+import org.example.init.repository.UserAccountRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,10 +12,10 @@ import java.time.temporal.ChronoUnit;
 public class LimitService {
 
     private final RequestLogRepository requestLogRepository;
-    private final UsuarioRepository usuarioRepository;
+    private final UserAccountRepository usuarioRepository;
 
     public LimitService(RequestLogRepository requestLogRepository,
-                        UsuarioRepository usuarioRepository) {
+                        UserAccountRepository usuarioRepository) {
         this.requestLogRepository = requestLogRepository;
         this.usuarioRepository = usuarioRepository;
     }
