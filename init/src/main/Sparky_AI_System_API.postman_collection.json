@@ -1,0 +1,828 @@
+{
+  "info": {
+    "name": "Sparky AI System API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "sparky-ai-system-api"
+  },
+  "item": [
+    {
+      "name": "\ud83d\udd10 Autenticaci\u00f3n",
+      "item": [
+        {
+          "name": "POST /api/auth/signup",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"password123\",\n  \"role\": \"SPARKY_ADMIN\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/signup",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "signup"
+              ]
+            },
+            "description": "Registrar nuevo usuario"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "\ud83c\udfe2 Gesti\u00f3n de Empresas (Super Admin)",
+      "item": [
+        {
+          "name": "POST /api/admin/companies",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Empresa X\",\n  \"adminEmail\": \"admin@empresa.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/companies",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "companies"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/admin/companies",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/companies",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "companies"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/admin/companies/1",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/companies/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "companies",
+                "1"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /api/admin/companies/1",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Empresa Actualizada\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/companies/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "companies",
+                "1"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /api/admin/companies/1/status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"active\": false\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/companies/1/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "companies",
+                "1",
+                "status"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/admin/companies/1/consumption",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/companies/1/consumption",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "companies",
+                "1",
+                "consumption"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "\ud83d\udd12 Restricciones de Empresa",
+      "item": [
+        {
+          "name": "POST /api/company/restrictions",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"model\": \"gpt-4\",\n  \"limit\": 1000\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/restrictions",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "restrictions"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/company/restrictions",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/restrictions",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "restrictions"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /api/company/restrictions/1",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"limit\": 2000\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/restrictions/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "restrictions",
+                "1"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /api/company/restrictions/1",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/restrictions/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "restrictions",
+                "1"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "\ud83d\udc64 Usuarios y L\u00edmites",
+      "item": [
+        {
+          "name": "POST /api/company/users",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Juan\",\n  \"email\": \"juan@empresa.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "users"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/company/users",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "users"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/company/users/1",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/users/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "users",
+                "1"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /api/company/users/1",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Juan Actualizado\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/users/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "users",
+                "1"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "POST /api/company/users/1/limits",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"model\": \"gpt-4\",\n  \"limit\": 500\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/users/1/limits",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "users",
+                "1",
+                "limits"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/company/users/1/consumption",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/company/users/1/consumption",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "company",
+                "users",
+                "1",
+                "consumption"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "\ud83e\udd16 Modelos de IA (Usuario Final)",
+      "item": [
+        {
+          "name": "POST /api/ai/chat",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"Hola, \\u00bfc\\u00f3mo est\\u00e1s?\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai/chat",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ai",
+                "chat"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "POST /api/ai/completion",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"prompt\": \"Completa: La inteligencia artificial\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai/completion",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ai",
+                "completion"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "POST /api/ai/multimodal",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"image\": \"<base64>\",\n  \"prompt\": \"Describe la imagen\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai/multimodal",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ai",
+                "multimodal"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/ai/models",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai/models",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ai",
+                "models"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/ai/history",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai/history",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ai",
+                "history"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "token",
+      "value": "<jwt_token>"
+    }
+  ]
+}

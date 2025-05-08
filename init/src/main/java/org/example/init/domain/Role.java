@@ -1,6 +1,8 @@
 package org.example.init.domain;
 
 public enum Role {
-    USER,
-    ADMIN
+    ROLE_USER,
+    ROLE_SPARKY_ADMIN,
+    ROLE_COMPANY_ADMIN
+
 }
